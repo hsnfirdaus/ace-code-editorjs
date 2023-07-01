@@ -84,7 +84,7 @@ ace.config.setModuleUrl("ace/mode/css_worker", modeCSSWorker);
 ace.config.setModuleUrl("ace/mode/php_worker", modePHPWorker);
 ```
 
-If you want you can also disable ace worker with passing `useWorker: false` in options config params.
+If you want, you can also disable ace worker with passing `{ useWorker: false }` in options config params.
 
 ## Complete Example
 
