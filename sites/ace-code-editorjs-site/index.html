@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ace Code EditorJS</title>
+    <link rel="stylesheet" href="/src/main.css" />
+  </head>
+  <body class="bg-sky-100">
+    <header class="text-center py-10">
+      <h1 class="text-3xl font-bold text-slate-800">Ace Code EditorJS</h1>
+      <h2 class="text-slate-600 mt-2 mb-5">
+        Ace Code Editor Block Tool for EditorJS
+      </h2>
+      <a
+        href="//github.com/hsnfirdaus/ace-code-editorjs"
+        class="inline-flex items-center bg-sky-500 font-bold h-10 text-white uppercase px-4 rounded-xl shadow-xl shadow-sky-300 hover:bg-sky-600"
+        >Visit GitHub</a
+      >
+    </header>
+    <div class="bg-white p-2 rounded-xl max-w-screen-md mx-auto shadow-xl">
+      <div id="editorjs"></div>
+    </div>
+    <div class="text-center my-6">
+      <button
+        id="show-result"
+        class="bg-sky-500 font-bold h-10 text-white uppercase px-4 rounded-xl shadow-xl shadow-sky-300 hover:bg-sky-600"
+      >
+        Show Result
+      </button>
+    </div>
+    <div
+      id="result-container"
+      class="hidden bg-white p-2 rounded-xl max-w-screen-md mx-auto shadow-xl"
+    >
+      <pre id="result" class="max-w-full overflow-x-auto"></pre>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
