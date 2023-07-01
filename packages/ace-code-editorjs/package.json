@@ -7,6 +7,18 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": {
+    "name": "Muhammad Hasan Firdaus",
+    "email": "hasanteam008@gmail.com",
+    "url": "https://github.com/hsnfirdaus"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hsnfirdaus/ace-code-editorjs"
+  },
   "types": "./dist/index.d.ts",
   "main": "./dist/index.umd.cjs",
   "module": "./dist/index.js",
@@ -35,5 +47,11 @@
   },
   "dependencies": {
     "@codexteam/icons": "^0.3.0"
-  }
+  },
+  "keywords": [
+    "editorjs",
+    "ace-code-editor",
+    "editorjs-code",
+    "editorjs-block"
+  ]
 }
