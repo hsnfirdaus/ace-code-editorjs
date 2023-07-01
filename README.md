@@ -1,6 +1,6 @@
 # Ace Code Block Tool for Editor.JS
 
-[Ace Code Editor](https://ace.c9.io/) block for the [Editor.js](https://editorjs.io/) with language selection.
+[Ace Code Editor](https://ace.c9.io/) block for the [Editor.js](https://editorjs.io/) with language selection. Take look demo at [ace-code-editorjs.pages.dev](https://ace-code-editorjs.pages.dev/)
 
 ## Usage
 
@@ -26,7 +26,7 @@ Import module:
 import AceCodeEditorJS from "ace-code-editorjs";
 ```
 
-**Important!** You must configure dynamic module import of ace!.
+**Important!** You must configure dynamic module import of ace, or import the language and configuring module url manualy!.
 
 For example, if you using newest bundler like webpack 5, rollup, vite:
 
@@ -129,7 +129,7 @@ new EditorJS({
 });
 ```
 
-You can also take a look at [source code of demo site](sites/ace-code-editorjs-site//src/main.ts) for complete working example.
+You can also take a look at [source code of demo site](https://github.com/hsnfirdaus/ace-code-editorjs/blob/main/sites/ace-code-editorjs-site/src/main.ts) for complete working example.
 
 ## Output Data
 
