@@ -35,11 +35,11 @@
   },
   "devDependencies": {
     "@editorjs/editorjs": "^2.27.2",
-    "@types/node": "^20.3.3",
+    "@types/node": "^20.5.2",
     "ace-builds": "^1.23.1",
     "typescript": "^5.0.2",
-    "vite": "^4.3.9",
-    "vite-plugin-dts": "^3.0.2"
+    "vite": "^4.4.9",
+    "vite-plugin-dts": "^3.5.2"
   },
   "peerDependencies": {
     "@editorjs/editorjs": "^2.27.2",
