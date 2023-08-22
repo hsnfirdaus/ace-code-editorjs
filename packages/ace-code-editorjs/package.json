@@ -31,7 +31,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepublish": "tsc && vite build"
   },
   "devDependencies": {
     "@editorjs/editorjs": "^2.27.2",
