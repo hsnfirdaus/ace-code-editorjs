@@ -1,7 +1,7 @@
 {
   "name": "ace-code-editorjs-site",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "type": "module",
   "scripts": {
@@ -10,16 +10,16 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@types/prismjs": "^1.26.0",
-    "autoprefixer": "^10.4.15",
-    "postcss": "^8.4.28",
+    "@types/prismjs": "^1.26.2",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
     "tailwindcss": "^3.3.3",
-    "typescript": "^5.0.2",
-    "vite": "^4.4.9"
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0"
   },
   "dependencies": {
-    "@editorjs/editorjs": "^2.27.2",
-    "ace-builds": "^1.24.1",
+    "@editorjs/editorjs": "^2.28.2",
+    "ace-builds": "^1.30.0",
     "ace-code-editorjs": "workspace:^",
     "prismjs": "^1.29.0"
   }
