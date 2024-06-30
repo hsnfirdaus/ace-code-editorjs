@@ -28,7 +28,11 @@ import AceCodeEditorJS from "ace-code-editorjs";
 
 **Important!** You must configure dynamic module import of ace, or import the language and configuring module url manualy!.
 
-For example, if you using newest bundler like webpack 5, rollup, vite:
+#### Dynamic Module Import
+
+Using this method, it will bundle all ace language mode into your production build, but only called when needed.
+
+If you using newest bundler like webpack 5, rollup, vite:
 
 ```javascript
 import "ace-builds/esm-resolver";
@@ -40,6 +44,17 @@ If using older version (webpack 4):
 import "ace-builds/webpack-resolver";
 ```
 
+#### Manual Module Import
+
+If you prefer keep your js bundle minimal, you can import language that you need only:
+
+```javascript
+import ace from "ace-builds";
+import modeTSX from "ace-builds/src-noconflict/mode-tsx?url";
+
+ace.config.setModuleUrl("ace/mode/tsx", modeTSX);
+```
+
 You can read more about this in [Ace Documentation](https://ace.c9.io/#nav=howto).
 
 ### Configuring Plugin
@@ -49,7 +64,7 @@ There are 2 optional configuration parameter:
 - `languages` : Configuring languages option. By default this plugin only load plain mode.
 - `options` : Configuration options for ace. For example: `theme`, `minLines`, `fontSize`, etc. You can see complete list in [Ace GitHub Wiki](https://github.com/ajaxorg/ace/wiki/Configuring-Ace).
 
-For `languages` the option must be object with string key as language output in data, value is object with key `label` (label of select option in editor) and `mode` (mode in ace). Example:
+For `languages` the value must be object with string key as language output in data, object value is object with key `label` (label of select option in editor) and `mode` (mode in ace). Example:
 
 ```javascript
 const languages = {
@@ -70,9 +85,10 @@ const languages = {
 
 ### Note For Worker
 
-By default, Ace use worker for some language. You must import and configuring it manualy for dynamic import!. This is example of configuring worker url using vite:
+By default, Ace use worker for some language. You must import and configuring it manualy (even if you using dynamic import!). This is example of configuring worker url using vite:
 
 ```javascript
+import ace from "ace-builds";
 import modeHTMLWorker from "ace-builds/src-noconflict/worker-html?url";
 import modeJSWorker from "ace-builds/src-noconflict/worker-javascript?url";
 import modeCSSWorker from "ace-builds/src-noconflict/worker-css?url";
@@ -84,7 +100,17 @@ ace.config.setModuleUrl("ace/mode/css_worker", modeCSSWorker);
 ace.config.setModuleUrl("ace/mode/php_worker", modePHPWorker);
 ```
 
-If you want, you can also disable ace worker with passing `{ useWorker: false }` in options config params.
+If you want, you can also disable ace worker with passing `{ useWorker: false }` in ace config options.
+
+### Fix Gutter Above EditorJS Popover
+
+The ace gutter bar (line number) will be above EditorJS Popover (the add block bar), you can fix this by adding this css:
+
+```css
+.ace_gutter {
+  z-index: unset !important;
+}
+```
 
 ## Complete Example
 
